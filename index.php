@@ -1,4 +1,4 @@
-<html>
+<html style="background-color:#115086;">
 <head>
 <meta charset="utf-8" />
 <title>Totalno točna vremenska prognoza</title>
@@ -7,7 +7,27 @@
 
 </head>
 
+<div id="logo" style="display:block;margin:0 auto;max-width:500px;max-height:500px;margin-bottom:1em;text-align:center;"><img src="ttvp.png" 
+style="display:inline-block; max-height: 100%; width: auto; max-width:100%;" /></div>
+<div id="content" style="color:white;font-family:monospace;font-size:14pt;font-weight:100;text-align:center;max-width:800px;margin:0 auto;">
+
 <?php
+function gitVersion()
+{
+    $full = exec('git describe --tags');
+    $parts = explode('-', $full);
+    $structured = 'N/A';
+    if (strlen($parts[0])) {
+        $structured = str_replace('v', '', $parts[0]);
+        if (isset($parts[1])) {
+            $structured .= '.' . $parts[1];
+        } else {
+            $structured .= '.0';
+        }
+    }
+    return $structured;
+}
+
 $var1 = array("Djelomice", "Pretežno", "Umjereno", "Uglavnom");
 $var2 = array("promjenljivo", "moguće", "mjestimice");
 $var3 = array("kišovito", "sunčano", "oblačno");
@@ -31,4 +51,5 @@ $builder = $var1[array_rand($var1)]." ".$var3[array_rand($var3)]." ".$var6[array
 
 echo $builder;
 
-?>
+?> </div> </body>
+</html>
