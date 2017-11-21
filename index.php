@@ -1,4 +1,4 @@
-<html style="background-color:#115086;">
+<html style="background-color:rgb(46,60,86);">
 <head>
 <meta charset="utf-8" />
 <title>Totalno točna vremenska prognoza</title>
@@ -10,6 +10,17 @@
 <div id="logo" style="display:block;margin:0 auto;max-width:500px;max-height:500px;margin-bottom:1em;text-align:center;"><img src="ttvp.png" 
 style="display:inline-block; max-height: 100%; width: auto; max-width:100%;" /></div>
 <div id="content" style="color:white;font-family:monospace;font-size:14pt;font-weight:100;text-align:center;max-width:800px;margin:0 auto;">
+
+<span><?php
+if (time() > strtotime('11 am')) {
+$datetime = new DateTime('tomorrow');
+}
+else {
+$datetime = new DateTime('today');
+}
+echo $datetime->format('d.m.Y.');
+ ?>
+</span><br /><br />
 
 <?php
 function gitVersion()
@@ -51,5 +62,11 @@ $builder = $var1[array_rand($var1)]." ".$var3[array_rand($var3)]." ".$var6[array
 
 echo $builder;
 
-?> </div> </body>
+?> 
+
+</div>
+
+<footer style="margin:0 auto; display:block; width:100%; text-align:center; margin-top:3em; color:rgba(255,255,255,0.5);">ver. <?php echo gitVersion(); ?><br /><small>&copy; JMV 2017.</small></footer>
+
+</body>
 </html>
