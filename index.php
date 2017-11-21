@@ -2,6 +2,8 @@
 <head>
 <meta charset="utf-8" />
 <title>Totalno točna vremenska prognoza</title>
+<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+<meta property="og:image" content="share.png" />
 <meta name="keywords" content="vremenska prognoza", "Hrvatska", "točna", "precizna", "najtočnija" />
 <meta name="description" content="Najtočnija vremenska prognoza na ovim prostorima" />
 
