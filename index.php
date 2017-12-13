@@ -65,10 +65,12 @@ $builder = $var1[array_rand($var1)]." ".$var3[array_rand($var3)]." ".$var6[array
 echo $builder;
 
 ?> 
-
+<p style="margin-top:3em;color:rgba(255,255,255,0.7);">
+<small>Github</small>
+</p>
 </div>
 
-<footer style="margin:0 auto; display:block; width:100%; text-align:center; margin-top:3em; color:rgba(255,255,255,0.5);">ver. <?php echo gitVersion(); ?><br /><small>&copy; JMV 2017.</small></footer>
+<footer style="margin:0 auto; display:block; width:100%; text-align:center; margin-top:1em; color:rgba(255,255,255,0.5);">ver. <?php echo gitVersion(); ?><br /><small>&copy; JMV 2017.</small></footer>
 
 </body>
 </html>
