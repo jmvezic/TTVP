@@ -66,7 +66,7 @@ echo $builder;
 
 ?> 
 <p style="margin-top:3em;color:rgba(255,255,255,0.7);">
-<small>Github</small>
+<small><a href="https://github.com/jmvezic/TTVP" style="color:rgba(255,255,255,0.7);">Github</a></small>
 </p>
 </div>
 
